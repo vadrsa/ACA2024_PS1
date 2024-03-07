@@ -42,7 +42,7 @@ flight_number VARCHAR(20),
 FOREIGN KEY (passenger_id) REFERENCES Passengers(passenger_id)
 );
 
-INSERT INTO Passengers (first_name, last_name, age) Values
+INSERT INTO Passengers (first_name, last_name, date_of_birth) Values
 ('Amelia', 'Earhart', '1985-01-22');
 
 INSERT INTO Concourses (concourse) VALUES
