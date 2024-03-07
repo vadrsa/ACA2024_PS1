@@ -2,8 +2,7 @@ CREATE TABLE Passengers(
 passenger_id BIGINT Identity(1, 1) PRIMARY KEY,
 first_name varchar(20) NOT NULL,
 last_name varchar(20) NOT NULL,
-age INT,
-CHECK (age >= 0 AND age <= 120)
+date_of_birth DATE
 );
 
 CREATE TABLE Concourses(
@@ -44,7 +43,7 @@ FOREIGN KEY (passenger_id) REFERENCES Passengers(passenger_id)
 );
 
 INSERT INTO Passengers (first_name, last_name, age) Values
-('Amelia', 'Earhart', 39);
+('Amelia', 'Earhart', '1985-01-22');
 
 INSERT INTO Concourses (concourse) VALUES
 ('A'), ('B'), ('C'), ('D'), ('E'), ('F'), ('T');
